@@ -97,8 +97,7 @@ namespace BuildXL.Cache.ContentStore.FileSystem
         public void CreateDirectory(AbsolutePath path)
         {
             path.ThrowIfPathTooLong();
-            BuildXL.Native.IO.FileUtilities.CreateDirectory(path.Path);
-            //Directory.CreateDirectory(path.Path);
+            Directory.CreateDirectory(path.Path);
         }
 
         /// <summary>
